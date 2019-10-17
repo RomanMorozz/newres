@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE androidx.constraintlayout.widget.ConstraintLayout [<!ELEMENT androidx.constraintlayout.widget.ConstraintLayout (TextView|ImageView)*><!ATTLIST androidx.constraintlayout.widget.ConstraintLayoutxmlns:android CDATA #REQUIREDxmlns:app CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDtools:context CDATA #REQUIRED><!ELEMENT TextView (#PCDATA)><!ATTLIST TextViewandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:text CDATA #REQUIREDapp:layout_constraintBottom_toBottomOf CDATA #REQUIREDapp:layout_constraintLeft_toLeftOf CDATA #REQUIREDapp:layout_constraintRight_toRightOf CDATA #REQUIREDapp:layout_constraintTop_toTopOf CDATA #REQUIRED><!ELEMENT ImageView (#PCDATA)><!ATTLIST ImageViewandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toTopOf CDATA #REQUIREDtools:srcCompat CDATA #REQUIRED>]>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#456799"
+        android:text="first attempt at Android Studio!"
+        android:textColor="#FFA500"
+        android:textSize="42sp"
+        android:textStyle="bold"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/imageView"
+    />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[2]" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-65dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[17]" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/imageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
